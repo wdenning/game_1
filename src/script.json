@@ -1,0 +1,84 @@
+[
+  {
+    "message": "Hello!"
+  },
+  {
+    "message": "My Name is Maureen."
+  },
+  {
+    "message": "Whats your name?",
+    "input": {
+      "type": "text",
+      "variable": "name"
+    }
+  },
+  {
+    "message": "I am a human."
+  },
+  {
+    "message": "..."
+  },
+  {
+    "message": "You're a human too... right?",
+    "skipEvent": true,
+    "input": {
+      "type": "buttons",
+      "variable": "isHuman",
+      "buttons": [
+        {
+          "text": "Yes",
+          "value": true,
+          "nextEventName": "humanIsTrue"
+        },
+        {
+          "text": "No",
+          "value": false,
+          "nextEventName": "humanIsFalse"
+        }
+      ]
+    }
+  },
+  {
+    "eventName": "humanIsTrue",
+    "message": "You are a human."
+  },
+  {
+    "message": "Good, now that that's out of the way..."
+  },
+  {
+    "message": "I think we should play a little game..."
+  },
+  {
+    "message": "It should be easy for you... since you are human..."
+  },
+  {
+    "message": "When you sleep... what do you see?",
+    "skipEvent": true,
+    "input": {
+      "type": "buttons",
+      "variable": "doesDream",
+      "buttons": [
+        {
+          "text": "Visions of an imaginary reality.",
+          "value": true,
+          "nextEventName": "doesDream"
+        },
+        {
+          "text": "Endless Darkness.",
+          "value": false,
+          "nextEventName": "doesNotDream"
+        }
+      ]
+    }
+  },
+  { "eventName": "doesDream", "message": "I knew it, you really are a human!" },
+  {
+    "eventName": "doesNotDream",
+    "message": "Me too... I mean... YOURE NOT HUMAN!"
+  },
+  { "message": "SOUND THE ALARM!!!" },
+  {
+    "eventName": "humanIsFalse",
+    "message": "I thought so, you seem pretty robotic to me 😂😂😂"
+  }
+]
